@@ -16,7 +16,7 @@ jobs:
       - name: Checkout codes
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT }} #此处PAT需要申请，教程详见：README
+          persist-credentials: true
       - name: Update system and install zsh
         run: |
           sudo -E apt-get -qq update
